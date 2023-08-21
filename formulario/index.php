@@ -1,7 +1,7 @@
 <!-- sistema de control de usuario 
 formulario:
 nombre completo:
-email:
+email: hola
 numero telefonico:
 -->
 <!doctype html>
