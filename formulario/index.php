@@ -1,5 +1,5 @@
 <!-- Sistena control de usuario 
-formulario: 
+formulario:.
     nombre completo
     email
     numero telefonico
