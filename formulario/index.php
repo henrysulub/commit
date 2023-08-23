@@ -1,5 +1,5 @@
 <!-- sistema de control de usuario 
-formulario:
+formularioo:
 nombre completo:
 email: hola
 numero telefonico:
