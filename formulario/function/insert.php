@@ -1,10 +1,9 @@
 <?php
 
-//
-// print_r($_POST);
+// exclusivo para testeas recibimiento de datos del form
+print_r($_POST);
 
 require('../connection/connection.php');
-
 
 $nombre = $_POST['nombre'];
 $email = $_POST['email'];
@@ -16,14 +15,8 @@ $ejecutar = mysqli_query($connection, $query);
 
 header("Location: ../index.php");
 
-
-
-
-// print("<br> Nombre del usuario:  " . $nombre . "email: " . $email . "   tel: ". $telefono);
-
+//print("<br> Nombre del usuario: " . $nombre . " email: " . $email . " tel: ". $telefono);
+//echo "<br> Nombre del usuario: {$nombre} email: {$email} tel: {$telefono}";
 
 
 ?>
-
-
-

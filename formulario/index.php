@@ -1,5 +1,5 @@
 <!-- Sistena control de usuario 
-formulario:.
+formulario: 
     nombre completo
     email
     numero telefonico
@@ -17,13 +17,16 @@ formulario:.
   <!-- Bootstrap CSS v5.2.1 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-  </head>
+  <!-- ========== Bootstrap Icons ========== -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
 
 <body>
   <header>
     <!-- place navbar here -->
+    <?php
+    include("./partials/navbar.html");
+    ?>
   </header>
   <main>
     <div class="container h-100" style="padding-top: 4rem;">
@@ -65,7 +68,7 @@ formulario:.
                   </tr>
                 </thead>
                 <tbody>
-                  <?php
+                <?php
                   require("./connection/connection.php");
 
                   $query = "SELECT * FROM usuario";
@@ -74,24 +77,27 @@ formulario:.
 
                   $contador = 1;
 
-                while($fila = mysqli_fetch_array($ejecutar)){
+                  while ($fila = mysqli_fetch_array($ejecutar)) {
 
-                  ?>
-    <tr>
-  <td><?php echo $contador;?></td>
-  <td><?php echo $fila['nombre'];?></td>
-  <td><?php echo $fila['email'];?></td>
-  <td><?php echo $fila['tel'];?>
-</td>
-
-   <td><a href="./view/update_form.php?id=<?php echo $fila['id_usuario']; ?>"><i class="bi bi-pencil-square text-warning"></i></a></td>
-     <td><a href="./function/delete.php?id=<?php echo $fila['id_usuario']; ?>"><i class="bi bi-trash2-fill text-danger"></i></a></td>
-       </tr>
-<?php $contador++;
-} ?>
-
-
-
+                ?>
+                      <tr>
+                          <td>
+                              <?php echo $contador; ?>
+                          </td>
+                          <td>
+                              <?php echo $fila[ 'nombre' ]; ?>
+                          </td>
+                          <td>
+                              <?php echo $fila[ 'email' ]; ?>
+                          </td>
+                          <td>
+                              <?php echo $fila[ 'tel' ]; ?>
+                          </td>
+                          <td><a href="./view/update_form.php?id=<?php echo $fila[ 'id_usuario' ]; ?>"><i class="bi bi-pencil-square text-warning"></i></a></td>
+                          <td><a href="./function/delete.php?id=<?php echo $fila[ 'id_usuario' ]; ?>"><i class="bi bi-trash2-fill text-danger"></i></a></td>
+                      </tr>
+                      <?php $contador++;
+                  } ?>
                 </tbody>
               </table>
               </div>
@@ -115,4 +121,3 @@ formulario:.
 </body>
 
 </html>
-
