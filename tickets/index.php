@@ -19,7 +19,7 @@
         <?php include 'includes/header.php'; ?>
     </header>
     <main>
-        <div class="container mt-5">
+        <div class="container h-100" style="padding-top: 15rem;">
             <div class="row justify-content-center align-items-center g-2">
                 <div class="col">
                     <h2>Sistema de Tickets para la Gestión de Incidencias</h2>
