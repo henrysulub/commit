@@ -51,3 +51,7 @@ tabla - estatus -> Abierto, Proceso, Pausado, Cerrado
 
 id_estatus
 nombre_estatus
+
+ticket
+
+id_ticket id_cliente: Luisito * db id_area: Soporte tecnico * db incidencia: Hola buenos días, tengo una situación con mi equipo de computo * cliente id_nivel: Urgente * db id_estatus: por defecto - Abierto * db fecha_creacion: datetime - 30-09-23 11:00 * manejador db (phpmyadmin)
